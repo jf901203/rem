@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>rem</title>
+    <link rel="stylesheet" href="./base.css">
+    <style>
+     .header{
+         width: 100%;
+         height: 1.066667rem;
+         background: red;
+     }
+     .header_item{
+         float: left;
+         color: #fff;
+         font-size: .426667rem;
+         line-height: 1.066667rem;
+         margin-left: .533333rem;
+		 }
+		 .banner_content{
+			 position: relative;
+		 }
+		 .banner{
+			 width: 100%;
+			 height: 5.066667rem;
+			 display: block
+		 }
+		 .banner_title{
+			 position: absolute;
+			 left: .4rem;
+			 bottom: .4rem;
+			 color:#fff;
+		 }
+		 .news-item{
+			 width: 100%;
+			 padding-left: .4rem;
+			 padding-right: .4rem;
+			 box-sizing: border-box;
+			 height: 2.4rem;
+		 }
+		 .news-inner{
+			 border-bottom: .026667rem solid #ccc;
+			 overflow: hidden;
+			 position: relative;
+			 padding-bottom: .266667rem;
+		 }
+		 .news-img{
+			 width: 2.533333rem;
+			 height: 1.866667rem;
+			 margin-top: .266667rem;
+			 float: left;
+       margin-right: .4rem;
+		 }
+		 .news-title{
+			font-size: .453333rem;
+			margin-top: .4rem;
+			color: #404040;
+		 }
+		 .time{
+			 position: absolute;
+			 left: 2.933333rem;
+			 bottom: .453333rem;
+			 color: #888;
+			 font-size: .32rem;
+		 }
+		 .num{
+			 position: absolute;
+			 right: .106667rem;
+			 font-size: .32rem;
+			 bottom: .453333rem;
+			 color:#888;
+		 }
+		 .num::before{
+			 content: ' ';
+			 display: block;
+			 background-image: url('./icon.png');
+			 background-size: contain;
+			 width: .56rem;
+			 height: .56rem;
+			 position: absolute;
+			 left: -0.613333rem;
+			 top: -0.106667rem;
+		 }
+    </style>
+</head>
+
+<body>
+ <div class="header">
+   <ul>
+       <li class="header_item">推荐</li>
+       <li class="header_item">新闻</li>
+       <li class="header_item">娱乐</li>
+       <li class="header_item">体育</li>
+       <li class="header_item">图片</li>
+       <li class="header_item">财经</li>
+   </ul>
+ </div>
+ <div class=" banner_content">
+	<img class="banner" src="./1.jpg" alt="">
+	<p class="banner_title">2019网易盛典</p>
+ </div>
+ <div class="news-content">
+	 <ul>
+		 <li class="news-item">
+			  <div class="news-inner">
+					 <img src="./2.jpg" class="news-img" alt="">
+            <p class="news-title">
+							天津市副署长
+						</p>
+						<span class="time">1填前</span>
+						<span class="num">999</span>
+				</div>
+		 </li>
+		 <li class="news-item">
+			<div class="news-inner">
+				 <img src="./2.jpg" class="news-img" alt="">
+					<p class="news-title">
+						天津市副署长
+					</p>
+					<span class="time">1填前</span>
+					<span class="num">999</span>
+			</div>
+	 </li>
+	 <li class="news-item">
+		<div class="news-inner">
+			 <img src="./2.jpg" class="news-img" alt="">
+				<p class="news-title">
+					天津市副署长
+				</p>
+				<span class="time">1填前</span>
+				<span class="num">999</span>
+		</div>
+ </li>
+ <li class="news-item">
+	<div class="news-inner">
+		 <img src="./2.jpg" class="news-img" alt="">
+			<p class="news-title">
+				天津市副署长
+			</p>
+			<span class="time">1填前</span>
+			<span class="num">999</span>
+	</div>
+</li>
+<li class="news-item">
+	<div class="news-inner">
+		 <img src="./2.jpg" class="news-img" alt="">
+			<p class="news-title">
+				天津市副署长
+			</p>
+			<span class="time">1填前</span>
+			<span class="num">999</span>
+	</div>
+</li>
+<li class="news-item">
+	<div class="news-inner">
+		 <img src="./2.jpg" class="news-img" alt="">
+			<p class="news-title">
+				天津市副署长
+			</p>
+			<span class="time">1填前</span>
+			<span class="num">999</span>
+	</div>
+</li>
+<li class="news-item">
+	<div class="news-inner">
+		 <img src="./2.jpg" class="news-img" alt="">
+			<p class="news-title">
+				天津市副署长
+			</p>
+			<span class="time">1填前</span>
+			<span class="num">999</span>
+	</div>
+</li>
+	 </ul>
+ </div>
+</body>
+</html>
+<script>
+// 动态获取设备宽度 初始化根元素字体 rem以根元素的字体的大小作为基准值
+let oWidth=document.documentElement.clientWidth || document.body.clientWidth;
+let oHtml=document.getElementsByTagName('html')[0];
+// 根据设备视口设置基准值的 如布局视口为375px html的font-size:37.5px基准值 1rem=37.5px
+// 在vscode设置中设置默认字体就要设置为37.5px基准值
+oHtml.style.fontSize=oWidth/10+'px'
+// 根据屏幕大小改变根元素字体大小 做出响应式的效果
+// 监听屏幕大小的改变
+window.addEventListener('resize',function (e) { 
+	let oWidth=document.documentElement.clientWidth || document.body.clientWidth;
+	oHtml.style.fontSize=oWidth/10+'px'
+ })
+
+
+</script>
